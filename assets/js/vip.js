@@ -153,7 +153,11 @@ $(document).ready(function(){
 			data: { slug: $(this).attr("data-slug")}
 		}).done(function(data){
 			data = $.parseJSON(data);
-			/*var player = '<div id="jp_container_1" class="jp-video jp-video-w-458p">\n\
+			$.dialog({
+				mask:false,
+				height:430,
+				title:'jQuery Script!',
+				html:'<div id="jp_container_1" class="jp-video jp-video-w-458p">\n\
 						<div class="jp-type-single">\n\
 							<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;"><img id="jp_poster_0"><video id="jp_video_0" preload="metadata" src="'+data.file+'" title="'+data.songName+'" style="width: 0px; height: 0px;"></video></div>\n\
 							<div class="jp-gui">\n\
@@ -199,37 +203,35 @@ $(document).ready(function(){
 								To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.\n\
 							</div>\n\
 						</div>\n\
-					</div>';
-			$("#resizeDiv").html(player);*/
-				$("#jquery_jplayer_1").jPlayer({
-					ready: function () {
-						$(this).jPlayer("setMedia", {
-							title: data.songName,
-							webm: 'assets/videos/Big_Buck_Bunny_Trailer.webm',
-						//	poster: data.poster
+					</div>',
+				callback:function(){
+					$("#jquery_jplayer_1").jPlayer({
+							ready: function () {
+								$(this).jPlayer("setMedia", {
+									title: data.songName,
+									mp4: data.file,
+								//	poster: data.poster
+								});
+							},
+							play: function() { // To avoid multiple jPlayers playing together.
+								$(this).jPlayer("pauseOthers");
+							},
+							swfPath: "assets/jPlayer/Jplayer.swf",
+							supplied: "mp4",
+							size: {
+									 width: "458px",
+									 height: "258px"
+								},
+							globalVolume: true,
+							smoothPlayBar: true,
+							keyEnabled: true
 						});
-					},
-					play: function() { // To avoid multiple jPlayers playing together.
-						$(this).jPlayer("pauseOthers");
-					},
-					swfPath: "assets/jPlayer/Jplayer.swf",
-					supplied: "webm",
-					size: {
-							 width: "458px",
-							 height: "258px"
-						},
-					globalVolume: true,
-					smoothPlayBar: true,
-					keyEnabled: true
-				});
+						//$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+				}
 			});
-		});		
+		});
+	});		
 	// Play Video Ends
-
-$('#resizeDiv')
-    .draggable()
-    .resizable();
-
 });
 function populateSubGenres(data,type){
 
