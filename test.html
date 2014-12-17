@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js gt-ie8">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>VIP</title>
+
+<!--=================================
+Meta tags
+=================================-->
+
+<meta name="description" content="">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+
+<!--=================================
+Style Sheets
+=================================-->
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+<!--Plugins CSS Files-->
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.transitions.css">
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.vegas.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animations.css">
+<link rel="stylesheet" type="text/css" href="assets/css/bigvideo.css">
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="assets/css/fractionslider.css">
+<!--custom styles for Poison-->
+<link rel="stylesheet" href="assets/css/main.css">
+
+
+
+<link rel="stylesheet" id="skin-css" type="text/css" href="assets/css/colors/default.css">
+<link rel="stylesheet" type="text/css" href="assets/css/switcher.css">
+
+
+<script src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+
+<body data-spy="scroll" data-target="#sticktop" data-offset="70">
+<!--=====================================
+Preloader
+========================================-->
+<div id="jSplash">
+	<figure class="preload_logo">
+		<img src="assets/img/basic/logo2.png" alt=""/>
+	</figure>
+</div>
+<div class="wide_layout box-wide">
+    <!--================
+     Banner
+    ====================-->
+    <section id="section_1" class="banner fraction_wrapper">
+    
+        <div class="fractionSlide">
+          <div data-delay="0" data-in="scrollLeft" class="slide">
+                <img data-step="1" data-in="bottom" data-position="0,0" data-time="499" src="assets/img/slider/slide_circles.png" alt=""/>
+                
+                <img data-step="2" data-in="bottom" data-position="0,0" data-time="1499" src="assets/img/slider/slide1.png" alt=""/>
+                
+                <h1  data-delay="500" data-step="4" data-in="left" data-out="bottom" data-position="200,401" data-time="1000">Become a Member.</h1>
+                
+          </div>
+          
+          <div data-delay="0" data-in="scrollLeft" class="slide">
+          	<img data-step="1" data-in="bottom" data-position="0,0" data-time="499" src="assets/img/slider/slide_circles.png" alt=""/>
+                 
+                <img data-step="5" data-in="bottom" data-position="0,100" data-time="1499" src="assets/img/slider/slide2a.png" alt=""/>
+                <img data-step="4" data-in="bottom" data-position="0,100" data-time="1499" src="assets/img/slider/slide2b.png" alt=""/>
+                
+                <img data-step="2" data-in="bottom" data-position="0,100" data-time="1499" src="assets/img/slider/slide2.png" alt=""/>
+                
+                <h1  data-delay="500" data-step="4" data-in="top" data-out="top" data-position="20,631" data-time="1000">HD Videos.</h1>
+                <a href="#" class="btn btn-default" data-delay="500" data-step="5" data-in="right" data-out="top" data-position="149,799" data-time="1000">Enter Site</a>
+                <a href="#" class="btn btn-white" data-delay="500" data-step="6" data-in="left" data-out="top" data-position="149,999" data-time="1000">Buy Membership</a>
+                
+          </div>
+          
+          
+       </div>
+    <!--=================================
+    JPlayer (Audio Player)
+    =================================-->
+      <!--Do not edit this section Unless you have to modify HTML structure of Playlist-->
+      <div class="rock_player pre_sticky">
+      <div class="sticky_player" data-sticky="true">
+        <div class="play_list">
+          <div class="list_scroll">
+            <div class="container ">
+              <ul class="music_widget player_data">
+                <li class="music_row_header">
+                  <div class="column_one"> # </div>
+                  <div class="column_two"> &nbsp;<!--no header for picture column--> 
+                  </div>
+                  <div class="column_three"> track name </div>
+                  <div class="column_four"> genre </div>
+                  <div class="column_five"> composer </div>
+                  <div class="column_six"> length </div>
+                  <div class="column_seven"> &nbsp;<!--no header for play column--> 
+                  </div>
+                  <div class="column_eight"> &nbsp;<!--no header for btn column--> 
+                  </div>
+                </li>
+                <li class="music_row">
+                  <div class="column_one track_index"></div>
+                  <div class="column_two track_thumb"></div>
+                  <div class="column_three track_title"></div>
+                  <div class="column_four track_genre"></div>
+                  <div class="column_five track_composer"></div>
+                  <div class="column_six track_length"></div>
+                  <div class="column_seven"> <a class="play_it" href="#"><span class="fa fa-play"></span></a> <a href="#"><span class="fa fa-plus"></span></a> <a class="itunesLink" href="#"><span class="fa fa-download"></span></a> </div>
+                  <div class="column_eight"> <a class="btn btn_watch_video" href="#">watch video</a> </div>
+                </li>
+                <!--music row-->
+                
+                <li class="music_row">
+                  <div class="column_one track_index"></div>
+                  <div class="column_two track_thumb"></div>
+                  <div class="column_three track_title"></div>
+                  <div class="column_four track_genre"></div>
+                  <div class="column_five track_composer"></div>
+                  <div class="column_six track_length"></div>
+                  <div class="column_seven"> <a class="play_it" href="#"><span class="fa fa-play"></span></a> <a href="#"><span class="fa fa-plus"></span></a> <a class="itunesLink" href="#"><span class="fa fa-download"></span></a> </div>
+                  <div class="column_eight"> <a class="btn btn_watch_video" href="#">watch video</a> </div>
+                </li>
+                <!--music row-->
+                <li class="music_row">
+                  <div class="column_one track_index"></div>
+                  <div class="column_two track_thumb"></div>
+                  <div class="column_three track_title"></div>
+                  <div class="column_four track_genre"></div>
+                  <div class="column_five track_composer"></div>
+                  <div class="column_six track_length"></div>
+                  <div class="column_seven"> <a class="play_it" href="#"><span class="fa fa-play"></span></a> <a href="#"><span class="fa fa-plus"></span></a> <a class="itunesLink" href="#"><span class="fa fa-download"></span></a> </div>
+                  <div class="column_eight"> <a class="btn btn_watch_video" href="#">watch video</a> </div>
+                </li>
+                <!--music row-->
+                <li class="music_row">
+                  <div class="column_one track_index"></div>
+                  <div class="column_two track_thumb"></div>
+                  <div class="column_three track_title"></div>
+                  <div class="column_four track_genre"></div>
+                  <div class="column_five track_composer"></div>
+                  <div class="column_six track_length"></div>
+                  <div class="column_seven"> <a class="play_it" href="#"><span class="fa fa-play"></span></a> <a href="#"><span class="fa fa-plus"></span></a> <a class="itunesLink" href="#"><span class="fa fa-download"></span></a> </div>
+                  <div class="column_eight"> <a class="btn btn_watch_video" href="#">watch video</a> </div>
+                </li>
+                <!--music row-->
+                <li class="music_row">
+                  <div class="column_one track_index"></div>
+                  <div class="column_two track_thumb"></div>
+                  <div class="column_three track_title"></div>
+                  <div class="column_four track_genre"></div>
+                  <div class="column_five track_composer"></div>
+                  <div class="column_six track_length"></div>
+                  <div class="column_seven"> <a class="play_it" href="#"><span class="fa fa-play"></span></a> <a href="#"><span class="fa fa-plus"></span></a> <a class="itunesLink" href="#"><span class="fa fa-download"></span></a> </div>
+                  <div class="column_eight"> <a class="btn btn_watch_video" href="#">watch video</a> </div>
+                </li>
+                <!--music row-->
+              </ul>
+              <!--music_widget--> 
+            </div>
+            <!--container--> 
+          </div>
+        </div>
+        
+        
+        <div class="container player_wrapper">
+          <div class="row">
+            <div id="player-instance" class="jp-jplayer"></div>
+            <div class="jp-title audio-title">little black bag pack</div>
+            <div class="rock_controls controls">
+              <div  class="fa fa-play jp-play"></div>
+              <div  class="fa fa-pause jp-pause"></div>
+            </div>
+            <!--controls-->
+            <div class="audio-progress">
+              <div class="jp-seek-bar">
+                <div class="audio-play-bar jp-play-bar" style="width:20%;"></div>
+              </div>
+              <!--jp-seek-bar--> 
+            </div>
+            <!--audio-progress-->
+            <div class="audio-timer"> <span class="jp-current-time">01:02</span> </div>
+            <div class="jp-volume">
+              <ul>
+                <li class="active"><a href="#"></a></li>
+                <li class="active"><a href="#"></a></li>
+                <li class="active"><a href="#"></a></li>
+                <li class="active"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+            <a href="#" class="playlist_expander fa fa-bars"></a> </div>
+        </div>
+      </div></div>
+    </section>
+    <!--//banner--> 
+    <!--=========================
+     Header
+    ===========================-->
+    <header>
+      <nav id="sticktop" class="navbar navbar-default" data-sticky="true">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#"><img src="assets/img/basic/logo.png" alt="logo"/></a> </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#section_3">News</a></li>
+              <li><a href="#section_5">Videos</a></li>
+              <li><a href="#section_12">About</a></li>
+              <li><a href="#section_13">Connect</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse --> 
+        </div>
+      </nav>
+    </header>
+    
+    <div class="sections_wrapper"> 
+    <!--================
+     Newsletter
+    ====================-->
+      <section id="section_3" class="newsletter_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>we have special news & prizes only <br>
+                for our biggest poison fans!</h3>
+              <div class="team_prizes"> 
+              	<figure class="team_stand animatedParent" data-sequence="400">
+                	<img class="animated fadeInUp" data-id="1" src="assets/img/team/man1.png" alt=""/>
+                    <img class="animated fadeInRight" data-id="2" src="assets/img/team/man2.png" alt=""/>
+                    <img class="animated fadeInLeft" data-id="3" src="assets/img/team/man3.png" alt=""/>
+                    <img class="animated fadeInRight" data-id="4" src="assets/img/team/man4.png" alt=""/>
+                    <img class="animated fadeInLeft" data-id="5" src="assets/img/team/man5.png" alt=""/>
+                </figure>
+                <div class="newsletter_form">
+                  <form>
+                    <input type="text" placeholder="Name"/>
+                    <input type="email" placeholder="Email"/>
+                    <button>Access</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--//Newsletter--> 
+      
+      <!--======================================
+    Parallax/facebook page promotion Section
+    ==========================================-->
+      <section id="section_4" class="parallax parallax_one facebook_promo animatedParent " data-stellar-background-ratio="0.5">
+        <div class="parallax_inner ">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1 class="animated fadeInUp">Poison music</h1>
+                <h3 class="animated fadeInDown">"Like" If you love them! </h3>
+                <a href="#" class="btn btn_fb">like us on facebook</a> </div>
+              <!--column--> 
+            </div>
+            <!--row--> 
+          </div>
+          <!--container--> 
+        </div>
+        <!--parallax_inner--> 
+      </section>
+      <!--//parallax--> 
+      
+    <!--=============
+    Music Tracks
+    ===============-->
+      <section id="section_5" class="track_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <div class="section_head_widget animatedParent ">
+                <h2 class="animated fadeInLeft">vip video</h2>
+                <h5 class="animated bounceInRight">All Videos</h5>
+              </div>
+              <!--section_head_widget--> 
+            </div>
+            <div class="col-xs-12 col-sm-4 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    SELECT GENRE <span class="fa fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">2013</a></li>
+                    <li><a href="#">2012</a></li>
+                    <li><a href="#">2011</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    SELECT SUB GENRE <span class="fa fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">2013</a></li>
+                    <li><a href="#">2012</a></li>
+                    <li><a href="#">2011</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <!--row-->
+          <div class="tours_widget">
+            <div class="tour_row_header">
+              <div class="column_one"> Date </div>
+              <div class="column_two"> &nbsp;<!--no header for picture column--> 
+              </div>
+              <div class="column_three"> Song Name </div>
+              <div class="column_four"> Artist Name </div>
+              <div class="column_five"> BPM </div>
+              <div class="column_six"> Action </div>
+            </div>
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>10/10/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_07.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>10/11/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_01.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Events Center </div>
+                <div class="column_four"> Pittsburgh, PA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>15/11/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_05.jpg" alt="" /> </div>
+                <div class="column_three"> TD Lorem </div>
+                <div class="column_four"> Boston, MA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>20/11/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_01.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>25/11/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_08.jpg" alt="" /> </div>
+                <div class="column_three"> Wells Fargo Center </div>
+                <div class="column_four"> Philadelphia, PA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>30/11/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_07.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>1/12/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_06.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>10/12/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_02.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>15/12/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_03.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>20/12/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_04.jpg" alt="" /> </div>
+                <div class="column_three"> Lorem Center </div>
+                <div class="column_four"> Fairfax, VA US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+            <div class="tour_row animatedParent  ">
+              <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>25/12/14</span>
+                </div>
+                <div class="column_two"> <img src="assets/img/media/media_05.jpg" alt="" /> </div>
+                <div class="column_three"> Ipsum! Center </div>
+                <div class="column_four"> Louisville, KY US </div>
+                <div class="column_five"> 160 </div>
+                <div class="column_six">
+                    <a href="#"><span class="fa fa-play"></span></a>
+                    <a href="#"><span class="fa fa-plus"></span></a>
+                    <a href="#"><span class="fa fa-download"></span></a>
+                </div>
+              </div>
+            </div>
+            <!--tour row--> 
+          </div>
+          
+        </div>
+        
+        <div class="container">
+          <ul class="channels_list row animatedParent ">
+            <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-circular fa-music"></i>poison itunes</a></li>
+            <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-soundcloud"></i>poison soundcloud</a></li>
+            <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-youtube"></i>poison youtube</a></li>
+          </ul>
+       </div>
+       
+    </section>    
+    
+      <!--======================================
+    About
+    ==========================================-->
+      <section id="section_12" class="about_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="section_head_widget animatedParent ">
+                <h1 class="animated fadeInDown">Their amazing story</h1>
+                <h4>how they came to be so famous.</h4>
+              </div>
+            </div>
+            <!--section_head_widget--> 
+          </div>
+          <!--row-->
+          
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text_widget">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero ligula, mollis eget ipsum a, aliquet pellentesque nisi. Donec mollis vel orci eget consequat. Etiam ultrices eu erat eu facilisis. Morbi nec suscipit tortor. Sed eu est leo. Phasellus a enim a sem auctor sodales. Vestibulum interdum ultrices tincidunt. Vivamus suscipit odio id pretium commodo. Donec vitae pellentesque dui. Nullam a hendrerit mi, vel placerat neque. Nunc et nunc turpis. Mauris sed congue lectus, ut blandit diam. Sed pellentesque egestas magna in feugiat. Praesent in ipsum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>Quisque lacinia euismod lobortis. Pellentesque purus orci, consequat vel mi id, pretium accumsan urna. In hac habitasse platea dictumst. Aenean ut accumsan nunc. Nam ac bibendum mi. Maecenas ultricies blandit vehicula. Nullam posuere metus congue odio dictum vestibulum. Quisque pharetra, nisl sit amet fermentum dignissim, est felis consequat sapien, eu pellentesque nulla mi sed lacus. Aenean molestie condimentum consequat.</p>
+                <p>Sed a lectus suscipit, blandit arcu a, vehicula nisi. Quisque faucibus elit ac mauris sodales auctor. Quisque scelerisque aliquam accumsan. Donec ullamcorper tortor nec nisl egestas, vitae interdum diam dignissim. Donec sollicitudin eu tellus in fermentum. Ut eu dui sit amet erat euismod euismod in non turpis. Pellentesque luctus dui massa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--container--> 
+      </section>
+                
+      <!--======================================
+    Footer
+    ==========================================-->
+      <footer id="section_13" class="parallax parallax_five footer" data-stellar-background-ratio="0.5">
+        <div class="parallax_inner">
+          <div class="container">
+            <ul class="channels_list row animatedParent " data-sequence="400">
+              <li class="col-xs-12 col-sm-4 animated fadeInLeftShort" data-id="1"> <a href="#"><i class="fa fa-circular fa-music"></i>poison itunes</a></li>
+              <li class="col-xs-12 col-sm-4 animated fadeInLeft" data-id="2"><a href="#"><i class="fa fa-soundcloud"></i>poison soundcloud</a></li>
+              <li class="col-xs-12 col-sm-4  animated fadeInLeft" data-id="3"> <a href="#"><i class="fa fa-youtube"></i>poison youtube</a></li>
+              <li class="col-xs-12 col-sm-4 animated fadeInLeft" data-id="4"> <a href="#"><i class="fa fa-instagram"></i>poison Instagram</a></li>
+              <li class="col-xs-12 col-sm-4  animated fadeInLeft" data-id="5"> <a href="#"><i class="fa fa-flickr"></i>poison Flicker</a></li>
+              <li class="col-xs-12 col-sm-4  animated fadeInLeft" data-id="6"> <a href="#"><i class="fa fa-pinterest"></i>poison pinterest</a></li>
+            </ul>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="copyrights">&copy; 2014 <a href="#">poison music</a>.</div>
+              </div>
+            </div>
+          </div>
+          <!--container--> 
+        </div>
+        <!--parallax_inner--> 
+      </footer>
+      <!--//parallax--> 
+    </div>
+</div>
+<!--===================================================================
+Scripts
+====================================================================--> 
+<script src="assets/js/jquery-1.11.0.min.js"></script> 
+<script src="assets/js/jpreloader.min.js"></script>
+<script src="assets/js/jquery.mousewheel.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/jquery.easing-1.3.pack.js"></script> 
+<script src="assets/js/jquery.stellar.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script> 
+<script src="assets/js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+<script src="assets/js/tweetie.min.js"></script> 
+<script src="assets/js/jquery.sticky.js"></script> 
+<script src="assets/jPlayer/jquery.jplayer.min.js"></script> 
+<script src="assets/jPlayer/add-on/jplayer.playlist.min.js"></script> 
+<script src="assets/js/jquery.vegas.min.js"></script> 
+<script src="assets/js/css3-animate-it.js"></script> 
+<script src="assets/js/jquery.fractionslider.min.js"></script> 
+<script src="assets/js/jquery.mCustomScrollbar.min.js"></script> 
+<script src="assets/js/jquery.waitforimages.js"></script>
+<script src="assets/js/video.js"></script>
+<script src="assets/js/bigvideo.js"></script>
+<script src="assets/js/main.js"></script>  
+<script>
+
+$('body').jpreLoader({
+		splashID: "#jSplash",
+		loaderVPos: '50%',
+		autoClose: true,
+});
+/*====================================================================
+Put Your Google Tracker Code here
+===================================================================*/
+</script>
+</body>
+</html>
