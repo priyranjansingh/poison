@@ -55,7 +55,7 @@
                 <div class="column_four"> <?php echo $vVal->artistName; ?> </div>
                 <div class="column_five"> <?php echo $vVal->bpm; ?> </div>
                 <div class="column_six music">
-                    <a href="javascript:void(0);"><span class="fa fa-play" data-slug="<?php echo $vVal->slug; ?>"></span></a>
+                    <a href="javascript:void(0);"><span class="music fa fa-play" data-slug="<?php echo $vVal->slug; ?>"></span></a>
                     <a href="javascript:void(0);"><span class="fa fa-plus" data-slug="<?php echo $vVal->slug; ?>"></span></a>
                     <a href="javascript:void(0);"><span class="fa fa-download" data-slug="<?php echo $vVal->slug; ?>"></span></a>
                 </div>

@@ -46,6 +46,7 @@ $route['song-subgenre-filter'] = 'vip/filterSongBySubGenre';
 $route['song-pagination'] = 'vip/pagination';
 $route['search'] = 'vip/search';
 $route['get-sample'] = 'vip/getSampleUrl';
+$route['get-song-sample'] = 'vip/getSampleUrl';
 $route['download'] = 'vip/download';
 $route['add-to-crate'] = 'vip/addToCrate';
 $route['download-crate'] = 'vip/downloadCrate';

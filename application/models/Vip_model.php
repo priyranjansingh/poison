@@ -51,7 +51,7 @@
 		}
 
 		public function getSample($slug){
-			$this->db->select('id,songName,filePath,total_play');
+			$this->db->select('id,songType,songName,filePath,total_play');
 			$this->db->where('slug',$slug);
 			$query = $this->db->get("song_lists");
 			$file = $query->result();

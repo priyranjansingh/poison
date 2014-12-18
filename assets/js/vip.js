@@ -122,31 +122,121 @@ $(document).ready(function(){
 
 	// Play Music Starts
 
-	$(".music span.fa-play").click(function(){
-		alert($(this).attr("data-slug"));
-		$("#player-instance").jPlayer("destroy");
-		$('#player-instance .jp-title.audio-title').text(songName);
-		$("#player-instance").jPlayer({
-		   ready: function () {
-		    $(this).jPlayer("setMedia", {
-		     mp3: "/media/mysound.mp4"
-		    });
-		   },
-			cssSelectorAncestor: "",
-		   	swfPath: "assets/jPlayer/Jplayer.swf",
-			supplied: "mp3",
-			timeupdate: function(event) { // 4Hz
-			      // Restrict playback to first 90 seconds.
-			      if (event.jPlayer.status.currentTime > 90) {
-			         $(this).jPlayer('stop');
-			      }
-			   }
+	$(".fa-play").click(function(){
+		$.ajax({
+			url: base_url+"get-sample",
+			type: "POST",
+			data: { slug: $(this).attr("data-slug")}
+		}).done(function(data){
+			data = $.parseJSON(data);
+
+			if(data.type == 1){
+				$("#player-instance").jPlayer("destroy");
+				$('#player-instance .jp-title.audio-title').text(data.songName);
+				$("#player-instance").jPlayer({
+				   ready: function () {
+				    $("#player-instance").jPlayer("setMedia", {
+				    	title: data.songName,
+				     	mp3: data.file
+				    });
+				   },
+				   play: function() { // To avoid multiple jPlayers playing together.
+						$("#player-instance").jPlayer("pauseOthers");
+					},
+					cssSelectorAncestor: "",
+				   	swfPath: "assets/jPlayer/Jplayer.swf",
+					supplied: "mp3",
+					timeupdate: function(event) { // 4Hz
+					      // Restrict playback to first 90 seconds.
+					      if (event.jPlayer.status.currentTime > 90) {
+					         $("#player-instance").jPlayer('stop');
+					      }
+					   }
+				});
+			} else {
+				$.dialog({
+				mask:false,
+				height:430,
+				title:'jQuery Script!',
+				html:'<div id="jp_container_1" class="jp-video jp-video-w-458p">\n\
+						<div class="jp-type-single">\n\
+							<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;"><img id="jp_poster_0"><video id="jp_video_0" preload="metadata" src="'+data.file+'" title="'+data.songName+'" style="width: 0px; height: 0px;"></video></div>\n\
+							<div class="jp-gui">\n\
+								<div class="jp-video-play" style="display: block;">\n\
+									<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>\n\
+								</div>\n\
+								<div class="jp-interface">\n\
+									<div class="jp-progress">\n\
+										<div class="jp-seek-bar" style="width: 100%;">\n\
+											<div class="jp-play-bar" style="width: 0%;"></div>\n\
+										</div>\n\
+									</div>\n\
+									<div class="jp-current-time"></div>\n\
+									<div class="jp-duration"></div>\n\
+									<div class="jp-details">\n\
+										<ul>\n\
+											<li><span class="jp-title">'+data.songName+'</span></li>\n\
+										</ul>\n\
+									</div>\n\
+									<div class="jp-controls-holder">\n\
+										<ul class="jp-controls">\n\
+											<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>\n\
+											<li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;">pause</a></li>\n\
+											<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>\n\
+											<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>\n\
+											<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute" style="display: none;">unmute</a></li>\n\
+											<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>\n\
+										</ul>\n\
+										<div class="jp-volume-bar">\n\
+											<div class="jp-volume-bar-value" style="width: 80%;"></div>\n\
+										</div>\n\
+										<ul class="jp-toggles">\n\
+											<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>\n\
+											<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen" style="display: none;">restore screen</a></li>\n\
+											<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>\n\
+											<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off" style="display: none;">repeat off</a></li>\n\
+										</ul>\n\
+									</div>\n\
+								</div>\n\
+							</div>\n\
+							<div class="jp-no-solution" style="display: none;">\n\
+								<span>Update Required</span>\n\
+								To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.\n\
+							</div>\n\
+						</div>\n\
+					</div>',
+				callback:function(){
+					$("#jquery_jplayer_1").jPlayer({
+							ready: function () {
+								$("#jquery_jplayer_1").jPlayer("setMedia", {
+									title: data.songName,
+									mp4: data.file,
+								//	poster: data.poster
+								});
+							},
+							play: function() { // To avoid multiple jPlayers playing together.
+								$("#jquery_jplayer_1").jPlayer("pauseOthers");
+							},
+							swfPath: "assets/jPlayer/Jplayer.swf",
+							supplied: "mp4",
+							size: {
+									 width: "458px",
+									 height: "258px"
+								},
+							globalVolume: true,
+							smoothPlayBar: true,
+							keyEnabled: true
+						});
+						//$("#jplayer_inspector_1").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+					}
+				});
+			}
 		});
 	});
 
 	// Play Music Ends
 	// Play Video Starts
-	$(".video span.fa-play").click(function(){
+	/*$(".video span.fa-play").click(function(){
 		$.ajax({
 			url: base_url+"get-sample",
 			type: "POST",
@@ -207,14 +297,14 @@ $(document).ready(function(){
 				callback:function(){
 					$("#jquery_jplayer_1").jPlayer({
 							ready: function () {
-								$(this).jPlayer("setMedia", {
+								$("#jquery_jplayer_1").jPlayer("setMedia", {
 									title: data.songName,
 									mp4: data.file,
 								//	poster: data.poster
 								});
 							},
 							play: function() { // To avoid multiple jPlayers playing together.
-								$(this).jPlayer("pauseOthers");
+								$("#jquery_jplayer_1").jPlayer("pauseOthers");
 							},
 							swfPath: "assets/jPlayer/Jplayer.swf",
 							supplied: "mp4",
@@ -230,7 +320,7 @@ $(document).ready(function(){
 				}
 			});
 		});
-	});		
+	});		*/
 	// Play Video Ends
 });
 function populateSubGenres(data,type){

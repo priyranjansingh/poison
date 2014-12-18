@@ -107,6 +107,7 @@ Preloader
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#section_3">News</a></li>
+              <li><a href="#search">Search</a></li>
               <li><a href="#videos_section">Videos</a></li>
               <li><a href="#music_section">Songs</a></li>
               <li><a href="#section_12">About</a></li>
@@ -145,7 +146,85 @@ Preloader
         <!--parallax_inner--> 
       </section>
       <!--//parallax--> 
-      
+      <!--======================================
+    Search Section
+    ========================================-->
+    <section id="search" class="tours_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section_head_widget">
+          <h2>Search</h2>
+          <h5>whole library</h5>
+          </div>
+        </div>
+      </div>
+      <div class="tours_widget">
+      <form id="searchForm">
+        <div class="row">
+          <div class="col-xs-12">
+            <label>Search For</label>
+            <br/>
+            <input type="text" name="query" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label>Filter By Artist Name or Song Name</label>
+            <br/>
+            <select name="filter">
+              <option value="artist">Artist Name</option>
+              <option value="song">Song Name</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+          <div class="col-xs-6">
+            <label>Filter By Song or Video</label>
+            <br/>
+            <select name="type">
+              <option value="1">Song</option>
+              <option value="2">Video</option>
+              <option value="0">Both</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4"></div>
+          <div class="col-xs-4 text-center">
+            <button id="search">Search</button>
+          </div>
+          <div class="col-xs-4"></div>
+        </div>
+      </form>
+      <form id="bpmSearchForm">
+        <div class="row">
+          <div class="col-xs-6">
+            <label>BPM From</label>
+            <br/>
+            <input type="text" name="bpmFrom" />
+          </div>
+          <div class="col-xs-6">
+            <label>BPM To</label>
+            <br/>
+            <input type="text" name="bpmTo" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4"></div>
+          <div class="col-xs-4 text-center">
+            <button id="bpm_search">Search By BPM</button>
+          </div>
+          <div class="col-xs-4"></div>
+        </div>
+      </form>
+      </div>
+    </div>
+    </section>
+    <!--======================================
+    Search Section Ends
+    ========================================-->
+
+
       <!-=======================================
         Video Starts
       =======================================--> 
@@ -227,55 +306,6 @@ Preloader
       </footer>
       <!--//parallax--> 
     </div>
-</div>
-<div id="resizeDiv">
-  <div id="jp_container_1" class="jp-video jp-video-w-458p">
-            <div class="jp-type-single">
-              <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;"><img id="jp_poster_0"><video id="jp_video_0" preload="metadata" src="" title="" style="width: 0px; height: 0px;"></video></div>
-              <div class="jp-gui">
-                <div class="jp-video-play" style="display: block;">
-                  <a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
-                </div>
-                <div class="jp-interface">
-                  <div class="jp-progress">
-                    <div class="jp-seek-bar" style="width: 100%;">
-                      <div class="jp-play-bar" style="width: 0%;"></div>
-                    </div>
-                  </div>
-                  <div class="jp-current-time"></div>
-                  <div class="jp-duration"></div>
-                  <div class="jp-details">
-                    <ul>
-                      <li><span class="jp-title"></span></li>
-                    </ul>
-                  </div>
-                  <div class="jp-controls-holder">
-                    <ul class="jp-controls">
-                      <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-                      <li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;">pause</a></li>
-                      <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-                      <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                      <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute" style="display: none;">unmute</a></li>
-                      <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-                    </ul>
-                    <div class="jp-volume-bar">
-                      <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                    </div>
-                    <ul class="jp-toggles">
-                      <li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
-                      <li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen" style="display: none;">restore screen</a></li>
-                      <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
-                      <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off" style="display: none;">repeat off</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="jp-no-solution" style="display: none;">
-                <span>Update Required</span>
-                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-              </div>
-            </div>
-          </div>
 </div>
 <!--===================================================================
 Scripts

@@ -85,6 +85,7 @@
 	    	$filePath = $this->Vip_model->getSample($slug);
 	    	$path = explode("../", $filePath[0]->filePath);
 	    	$data['file'] = $path[1];
+	    	$data['type'] = $filePath[0]->songType;
 	    	$data['songName'] = $filePath[0]->songName;
 	    	echo json_encode($data);
 	    }

@@ -110,4 +110,5 @@
             </div>
             <a href="#" class="playlist_expander fa fa-bars"></a> </div>
         </div>
-      </div></div>
+      </div>
+  </div>
